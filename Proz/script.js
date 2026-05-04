@@ -1,26 +1,35 @@
 const NOME = "Gabriel Lucas";
-let tituloProsissional = "Garoto de programa / Faço de tudo";
+let tituloProfissional = "Garoto de programa / Faço de tudo";
 let minhaBio = "Sou um cara esforçado (quando quero)";
-let anoFormatura = 2028;
-let anoIngresso = 2025;
-let indefinido;
-let nulo = null;
-let curso = {
-    nome: "Sistema de informação",
-    semestre: 3,
-    disciplinaAtual: "Design focado no usuário"
-};
 
-console.log(typeof nulo);
-console.log(typeof indefinido);
-console.log(typeof anoFormatura);
-console.log(typeof minhaBio);
-console.log(typeof tituloProsissional);
-console.log(typeof tituloProsissional);
-console.log(typeof NOME);
-console.log(typeof curso);
+let anoFormatura = 2026;
+let mesFormatura = 12;
+let diaFormatura = 31;
+
+// Data atual
+let hoje = new Date();
+let anoAtual = hoje.getFullYear();
+let mesAtual = hoje.getMonth() + 1;
+let diaAtual = hoje.getDate();
+
+// Cálculo simples
+let anos = anoFormatura - anoAtual;
+let meses = mesFormatura - mesAtual;
+let dias = diaFormatura - diaAtual;
+
+if (dias < 0) {
+    dias = dias + 30;
+    meses = meses - 1;
+}
+
+if (meses < 0) {
+    meses = meses + 12;
+    anos = anos - 1;
+}
 
 document.getElementById("meuNome").innerText = NOME;
-document.getElementById("tituloProfissional").innerText = tituloProsissional;
-document.getElementById("minhaBio").innerText = minhaBio;
+document.getElementById("tituloProfissional").innerText = tituloProfissional;
+document.getElementById("minhabio").innerText = minhaBio;
 document.getElementById("anoFormatura").innerText = "Ano de Formatura: " + anoFormatura;
+
+document.getElementById("tituloTempo").innerText = "Faltam " + anos + " anos, " + meses + " meses e " + dias + " dias para a formatura";
