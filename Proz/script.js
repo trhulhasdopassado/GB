@@ -86,7 +86,7 @@ const perguntaGenero  = document.getElementById("pergunta-genero");
 const perguntaAtracao = document.getElementById("pergunta-atracao");
 const resultadoQuiz   = document.getElementById("resultado-quiz");
 
-let genero = "";
+/* let genero = "";
 let atracao = "";
 
 // -------- GÊNERO --------
@@ -132,4 +132,77 @@ function exibirResultado() {
   resultadoQuiz.style.padding = "12px";
   resultadoQuiz.style.borderRadius = "8px";
   resultadoQuiz.style.marginTop = "10px";
+} */
+
+/* Aura farm
+
+  let aura = 0;
+function reiniciarAura() {
+
+  aura = 0;
+
+  document.getElementById("auraTotal").innerText =
+    "Você tem: 0";
+
+  // esconder imagem final
+  document.getElementById("67").style.display = "none";
+
+  // esconder imagens de farming
+  document.getElementById("67Farming").style.display = "none";
+  document.getElementById("76Farming").style.display = "none";
+}
+
+function mostrarImagem() {
+
+  const imagemFinal = document.getElementById("67");
+
+  const imagem67 = document.getElementById("67Farming");
+  const imagem76 = document.getElementById("76Farming");
+
+  // aumenta aura
+  if (aura < 67) {
+    aura++;
+  }
+
+  // atualiza texto
+  document.getElementById("auraTotal").innerText =
+    "Você tem: " + aura;
+
+  // alterna imagens
+  if (aura % 2 === 0) {
+
+    imagem67.style.display = "block";
+    imagem76.style.display = "none";
+
+  } else {
+
+    imagem67.style.display = "none";
+    imagem76.style.display = "block";
+
+  }
+
+  if (aura === 67) {
+
+    imagemFinal.style.display = "block";
+
+    // esconder as imagens de farming
+    imagem67.style.display = "none";
+    imagem76.style.display = "none";
+  }
+} */
+let lista = [
+  "Jogo Valorant",
+  "Jogo Rocket League",
+  "Jogo Fortnite",
+  "Jogo Roblox",
+  "Jogo Minecraft"
+];
+
+for (let i = 0; i < lista.length; i++) {
+
+  let lista2 = document.createElement("li");
+  
+  lista2.textContent = lista[i];
+
+  document.getElementById("listaAbilidades").appendChild(lista2);
 }

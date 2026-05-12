@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lista de Projetos</title>
+
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <h1>Lista de Projetos</h1>
+
+    <h2 id="lista"></h2>
+
+    <div class="buttons">
+
+        <button onclick="adicionarProjeto()">
+            Adicionar Projeto
+        </button>
+
+        <button onclick="adicionarFinal()">
+            Adicionar no final
+        </button>
+
+        <button onclick="adicionarInicio()">
+            Adicionar no começo
+        </button>
+
+        <button onclick="tirarUltimo()">
+            Tirar último Projeto
+        </button>
+
+        <button onclick="tirarPrimeiro()">
+            Tirar primeiro Projeto
+        </button>
+
+    </div>
+
+    <div class="pesquisa">
+
+        <input
+            type="number"
+            id="numero"
+            placeholder="Digite a posição do Projeto"
+        >
+
+        <button onclick="mostrarProjeto()">
+            Mostrar Projeto
+        </button>
+
+    </div>
+
+    <h3 id="resultado"></h3>
+
+    <script src="script2.js"></script>
+
+</body>
+</html>
