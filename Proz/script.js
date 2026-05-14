@@ -1,3 +1,4 @@
+debugger
 const NOME = "Gabriel Lucas";
 let tituloProfissional = "Garoto de programa (Faço de tudo)";
 let minhaBio = "Sou um cara esforçado (quando quero)";
@@ -205,4 +206,31 @@ for (let i = 0; i < lista.length; i++) {
   lista2.textContent = lista[i];
 
   document.getElementById("listaAbilidades").appendChild(lista2);
+}
+
+function meuPeso(peso) {
+
+  return function (altura) {
+
+    return peso / (altura ** 2);
+
+  };
+
+}
+
+function calcularImc() {
+
+  let altura2 = Number(
+    document.getElementById("altura").value
+  );
+
+  let peso2 = Number(
+    document.getElementById("peso").value
+  );
+
+  let imc = meuPeso(peso2)(altura2);
+
+  document.getElementById("imc").innerText =
+    imc.toFixed(2);
+
 }
